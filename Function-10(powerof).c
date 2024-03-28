@@ -14,12 +14,12 @@ int main()
 
 void powerof(int a,int b)
 {
-  
+  int temp=b;
   int power=1;
 
   while(b--)
   {
     power*=a;
   }
-  printf("%d\n",power);
+  printf("%d to the power of %d is %d\n",a,temp,power);
 }
