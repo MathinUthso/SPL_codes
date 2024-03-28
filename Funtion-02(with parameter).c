@@ -1,15 +1,15 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-void ret_char(int a)
+void ret_char(char a)
 {
   
-  printf("Value received from main: %d\n",a);
+  printf("Value received from main: %c\n",a);
 }
 
 int main()
-{   int x;
-    scanf("%d",&x);
+{   char x;
+    scanf("%c",&x);
    ret_char(x);
 return 0;
 }
