@@ -16,16 +16,32 @@ int main()
 }
 
 int find_substr(char a[],char b[])
-{
-  int i,j;
-   for(i=0;i<strlen(a);i++)
+{ 
+   int count=0;
+   int flag=0;
+  int i;
+   for(i=0;i<strlen(a)-1;i++)
    {
-     for(j=0;j<strlen(b);j++)
-     {
-        if(a[i]==b[j])
-        return 1;
-        else 
-        return -1;
-     }
+      if(a[i]==b[0])
+      {
+         int j;
+          for(j=1;j<strlen(b);j++)
+          {
+             
+              if(b[j]==a[i+j])
+              {
+                 count++;
+              }
+              else 
+              break;    
+          }
+        
+      }
+     
    }
+   if(count==strlen(b)-1)
+    return 1;
+   else 
+     return -1;
+   
 }
